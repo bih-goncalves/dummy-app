@@ -1,0 +1,18 @@
+{
+  "name": "dummy-app",
+  "version": "1.0.0",
+  "description": "Service using NodeJS that replies health check on /.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "echo \"$NODE_ENV\"; [ $NODE_ENV = \"development\" ] && node dev || node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "bih-goncalves",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "repository": "git@github.com:bih-goncalves/dummy-app.git"
+}
