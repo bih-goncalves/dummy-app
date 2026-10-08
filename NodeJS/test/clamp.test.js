@@ -30,3 +30,7 @@ test('non-finite value, min or max throws TypeError', () => {
 test('min greater than max throws RangeError', () => {
   assert.throws(() => clamp(5, 10, 0), RangeError)
 })
+
+test('non-finite value takes precedence over an inverted range (TypeError, not RangeError)', () => {
+  assert.throws(() => clamp(NaN, 10, 0), TypeError)
+})
